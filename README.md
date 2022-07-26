@@ -61,3 +61,9 @@ In RedHat based OS, docker containers will be kept in <code>~/.local/share/conta
 <code>
     docker system prune
 </code>
+
+### Docker builder cache prune
+
+<code>
+    docker builder prune
+</code>

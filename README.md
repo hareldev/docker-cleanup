@@ -35,6 +35,13 @@ In RedHat based OS, docker containers will be kept in <code>~/.local/share/conta
     docker images -q --filter "dangling=true"
 </code>
 
+### List images of specific name / tag
+- notice this is not an exact match
+
+<code>
+    docker images --filter "reference=[imageName]:[imageTag]"
+</code>
+
 ### Remove images of any group
 
 <code>

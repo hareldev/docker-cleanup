@@ -76,6 +76,7 @@ In case you're getting an error running a container, which might expect environm
     podman run -d --entrypoint "/bin/bash" [image_ID] -c 'while true; do echo sleeping; sleep 2; done'
 </code>
 
+<br>
 If you're getting an error of: <code> Error: unable to find user default: no matching entries in passwd file</code> you'll need to specify the user:
 
 <code>

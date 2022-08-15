@@ -67,3 +67,17 @@ In RedHat based OS, docker containers will be kept in <code>~/.local/share/conta
 <code>
     docker builder prune
 </code>
+
+## Docker Troubleshooting
+### Change image ENTRYPOINT
+In case you're getting an error running a container, which might expect environment variable, or run an executalbe, you could debug it by changing the entrypoint:
+
+<code>
+    podman run -d --entrypoint "/bin/bash" [image_ID] -c 'while true; do echo sleeping; sleep 2; done'
+</code>
+
+If you're getting an error of: <code> Error: unable to find user default: no matching entries in passwd file</code> you'll need to specify the user:
+
+<code>
+    podman run -d --user [username/id] --entrypoint "/bin/bash" [image_ID] -c 'while true; do echo sleeping; sleep 2; done'
+</code>

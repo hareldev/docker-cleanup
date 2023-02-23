@@ -68,6 +68,11 @@ In RedHat based OS, docker containers will be kept in <code>~/.local/share/conta
     docker builder prune
 </code>
 
+### Delete unmounted volumes
+<code>
+podman volume rm --all
+</code>
+
 ## Docker Troubleshooting
 ### Change image ENTRYPOINT
 In case you're getting an error running a container, which might expect environment variable, or run an executalbe, you could debug it by changing the entrypoint:
